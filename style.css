@@ -55,6 +55,10 @@ nav {
     align-items: center;
 }
 
+.responsive-nav-items {
+    visibility: hidden;
+}
+
 .nav-items-underlines {
     width: 0%;
     height: 3px;
@@ -66,45 +70,81 @@ a:hover .nav-items-underlines {
     width: 100%;
     transition: width 0.3s ease-in-out;
 }
+.menu-btn{
+    visibility: hidden;
+}
+.responsive-nav-bar{
+    display: none;
+}
 
 @media (min-width:300px) and (max-width:800px) {
     nav {
-        position: static;
-        background: #000;
+        /* background: rgb(128, 0, 128); */
+        height: 70px;
+        background-color: rgba(128, 0, 128, 0.5);
+        backdrop-filter: blur(15px);
+    }
+    .nav-contents {
+       display: none;
     }
 
-    a {
+    .responsive-nav-items {
+        visibility: hidden;
+        display: flex;
+        flex-direction: column;
+        gap: 30px;
+        /* background-color: rgb(128, 0, 128); */
+        padding: 50px;
+        height: 100vh;
+        width: 70%;
+        position: absolute;
+        top: 0px;
+        left: 0;
+        z-index: 1;
+        color: plum;
+        background-color: rgba(128, 0, 128, 0.9);
+        backdrop-filter: blur(5px);
+    }
+    .menu-btn{
+       visibility: visible;
+    }
+    li{
+        width: 100%;
+        text-align: right;
+    }
+
+    a { 
+        display: flex;
+        width: 100%;
         font-size: 15px;
-        color: #f95959;
+        color: plum;
     }
 
     .logo {
         background: white;
     }
-
-    .nav-contents {
-        flex-direction: column;
-    }
-
     .logo {
-        height: 40px;
-        width: 40px;
+        height: 20px;
+        width: 20px;
+        background: #000;
     }
 
     .logo-img {
         font-size: 20px;
-        color: #000;
+        color: plum;
+    }
+    .responsive-nav-bar{
+        display: flex;
+        height: 70px;
+        width: 100%;
+        justify-content: space-between;
+        align-items: center;
+        padding: 0 20px;
+    }
+    .responsive-nav-bar li{
+        width: auto;
     }
 
-    .nav-contents ul {
-        flex-direction: column;
-        width: 100%;
-    }
-
-    .nav-contents ul li a {
-        width: 100%;
-        text-align: center;
-    }
 }
 
 /*  */
@@ -121,6 +161,7 @@ a:hover .nav-items-underlines {
     align-items: center;
     padding: 0 50px 0 50px;
     flex-grow: 1;
+    position: sticky;
 }
 
 .banner-contents {
@@ -192,6 +233,7 @@ a:hover .nav-items-underlines {
         align-items: center;
         height: auto;
         padding: 15px 10px;
+        margin-bottom: 20px;
     }
 
     .banner-contents {
@@ -223,15 +265,10 @@ a:hover .nav-items-underlines {
     .banner-img {
         height: 300px;
         width: 300px;
-        border-radius: 50%;
-        background-color: rgba(0, 0, 0, 0.459);
-        overflow: hidden;
     }
 
     .banner-img img {
         width: 100%;
         height: 100%;
-        background-clip: border-box;
-        object-fit: cover;
     }
 }
