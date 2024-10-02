@@ -22,6 +22,7 @@ nav {
     position: fixed;
     width: 100%;
     z-index: 10;
+    height: 70px;
 }
 
 .nav-contents {
@@ -161,7 +162,7 @@ a:hover .nav-items-underlines {
 .banner {
     background-color: rgb(49, 2, 49);
     background-image: url("https://images.pexels.com/photos/1603891/pexels-photo-1603891.jpeg?auto=compress&cs=tinysrgb&w=600");
-    height: 100vh;
+    height: 750px;
     background-blend-mode: overlay;
     background-position: center;
     background-repeat: no-repeat;
@@ -303,7 +304,8 @@ a:hover .nav-items-underlines {
 /* -------------------------------------- */
 .about,
 .services,
-.feedback-container {
+.feedback-container,
+.contacts {
     width: 80%;
     margin: auto;
     /* background: white; */
@@ -367,7 +369,7 @@ a:hover .nav-items-underlines {
 }
 
 .services-card {
-    background-color: rgba(128, 0, 128, 0.5);
+    /* background-color: rgba(128, 0, 128, 0.5); */
     backdrop-filter: blur(15px);
     padding: 20px;
     color: white;
@@ -409,14 +411,20 @@ a:hover .nav-items-underlines {
     width: 100%;
     background-color: rgba(128, 0, 128, 0.5);
     /* backdrop-filter: blur(15px); */
+    background-color: rgba(128, 0, 128, 0.5);
+    background-image: url("images/bubbles.jpg");
+    background-blend-mode: overlay;
+    background-size: cover;
+    background-position: center;
+
 }
 
 .feedback-container {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 40px 0;
-
+    padding: 70px 0;
+    backdrop-filter: blur(0px)
 }
 
 .feedback-continer-img {
@@ -452,12 +460,14 @@ a:hover .nav-items-underlines {
 .feedback-continer-tag p {
     color: white;
     margin-bottom: 20px;
+    /* text-align: justify; */
+    /* width: 400px; */
 }
 
 .feedback-continer-tag p span {
     font-size: 40px;
     line-height: normal;
-    color: yellow;
+    color: #ffc93c;
 }
 
 .client-name img {
@@ -482,7 +492,12 @@ a:hover .nav-items-underlines {
 @media (min-width:300px) and (max-width:800px) {
     .feedback-container {
         flex-direction: column;
+        /* padding: 5px; */
+    }
 
+    .feedback-continer-tag p {
+        width: auto;
+        /* text-align: center; */
     }
 
     .feedback-continer-img {
@@ -495,4 +510,76 @@ a:hover .nav-items-underlines {
 
     }
 
+}
+
+.contacts {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 70px 0;
+    flex: 1;
+}
+
+.contacts-tagline {
+    width: 50%;
+    color: purple;
+    font-size: 30px;
+    /* background-color: red; */
+    text-shadow: #000;
+    display: flex;
+    justify-content: center;
+}
+
+input,
+textarea {
+    margin-bottom: 20px;
+    width: 100%;
+    padding: 20px 20px;
+    color: purple;
+    box-shadow: 2px 2px 5px rgba(128, 0, 128, 0.5);
+    border: 2px solid transparent;
+    border-radius: 10px;
+    -webkit-transition: 0.5s;
+    transition: 0.5s;
+    outline: none;
+}
+
+textarea {
+    height: 150px;
+}
+
+input:focus,
+textarea:focus {
+    border: 3px solid purple;
+}
+
+label {
+    color: purple;
+    margin-bottom: 10px;
+}
+
+.contacts-form {
+    display: flex;
+    flex-direction: column;
+    /* background-color: blue; */
+    flex: 1;
+}
+
+.contacts-form button {
+    padding: 20px;
+    color: purple;
+    box-shadow: 2px 2px 5px rgba(128, 0, 128, 0.5);
+    border: none;
+    border-radius: 10px;
+    background-color: transparent;
+}
+
+.contacts-form button:hover {
+    border: 2px solid purple;
+    border-radius: 10px;
+    -webkit-transition: 0.5s;
+    transition: 0.5s;
+    transform: scale(1.05);
+    /* transition: transform 0.3s ease-in-out; */
+    cursor: pointer;
 }
