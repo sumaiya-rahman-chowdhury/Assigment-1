@@ -79,7 +79,7 @@ a:hover .nav-items-underlines {
 
 @media (min-width:300px) and (max-width:800px) {
     nav {
-        /* background: rgb(128, 0, 128); */
+        display: block;
         height: 70px;
         background-color: rgba(128, 0, 128, 0.5);
         backdrop-filter: blur(15px);
@@ -229,11 +229,11 @@ a:hover .nav-items-underlines {
 @media (min-width:300px) and (max-width:800px) {
     .banner {
         flex-direction: column;
-        justify-content: right;
+        justify-content:center;
         align-items: center;
-        height: auto;
+        height: 800px;
         padding: 15px 10px;
-        margin-bottom: 20px;
+        /* margin-bottom: 20px; */
     }
 
     .banner-contents {
@@ -245,10 +245,12 @@ a:hover .nav-items-underlines {
     .banner-contents h1 {
         font-size: 30px;
         color: plum;
+        text-align: center;
     }
 
     .banner-contents p {
         width: 100%;
+        text-align: center;
     }
 
     .banner-contents button {
@@ -271,4 +273,61 @@ a:hover .nav-items-underlines {
         width: 100%;
         height: 100%;
     }
+}
+@media (max-width:376px) {
+    .banner-contents h1 {
+        text-align: left;
+    }
+
+    .banner-contents p {
+        text-align: left;
+    }
+}
+/* -------------------------------------- */
+/* -------------------------------------- */
+/* -------------------------------------- */
+/* -------------------------------------- */
+/* -------------------------------------- */
+/* -------------------------------------- */
+.about{
+    width: 80%;
+    margin: auto;
+    background-color: rgba(109, 3, 109, 0.404);
+    backdrop-filter: blur(70px);
+}
+
+/* -------------------------------------- */
+/* -------------------------------------- */
+/* -------------------------------------- */
+/* -------------------------------------- */
+/* -------------------------------------- */
+/* -------------------------------------- */
+.about-container{
+padding: 50px;
+text-align: center;
+}
+.about-container h2{
+    margin-bottom: 30px;
+    font-size: 40px;
+    color: #fafafa;
+}
+.about-container p{
+    margin-bottom: 30px;
+    font-size: 20px;
+    color: #fafafa;
+}
+@media (min-width:300px) and (max-width:800px) {
+    .about-container{
+        padding: 5px;
+        }
+        .about-container h2{
+            margin-bottom: 0px;
+            font-size: 30px;
+            padding: 20px 0;
+        }
+        .about-container p{
+            margin-bottom: 20px;
+            font-size: 15px;
+            text-align: justify;
+        }
 }
