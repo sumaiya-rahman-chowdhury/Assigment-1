@@ -649,7 +649,10 @@ progress{
 .project{
     margin-top: 50px;
     text-align: center;
-
+}
+.project h2{
+    color: purple;
+    font-size: 40px;
 }
 .projects{
     display: grid;
