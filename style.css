@@ -686,3 +686,57 @@ progress{
 .grid-span-2{
     grid-column: span 2;
 }
+
+
+
+footer {
+    width: 100%;
+    background-color: rgb(44 44 44);
+}
+.footer-content{
+    padding: 50px 50px;
+    display: flex;
+    justify-content: space-around;
+    align-items: flex-start;
+    gap: 30px;
+}
+
+.footer-content-logo h3,.footer-content p{
+    font-weight: 300;
+    color: white;
+
+}
+
+.footer-content-logo h3 span {
+    font-weight: bold;
+    /* color: white; */
+}
+.footer-content button{
+    background: blue;
+    border: none;
+    color: wheat;
+}
+
+.footer-content-logo p,.footer-content li a  {
+    font-size: 13px;
+    color: rgba(128, 128, 128, 0.89);
+    font-weight: 300;
+    width: 300px;
+    line-height: normal;
+    margin-bottom: 10px;
+}
+@media (min-width:300px) and (max-width:900px) {
+    
+.footer-content{
+    padding: 10px;
+    flex-wrap: wrap;
+    gap: 30px;
+    justify-content: flex-start;
+}
+
+.footer-content-logo p,.footer-content li a  {
+    width: 100%;   
+    text-align: left;
+    margin-bottom: 10px;
+}
+}
