@@ -687,6 +687,34 @@ progress{
     grid-column: span 2;
 }
 
+@media (min-width:300px) and (max-width:900px){
+
+    .projects{
+        display: grid;
+        gap: 1.5rem;
+        justify-content: center;
+        grid-template-columns: repeat(1,1fr) ;
+        margin-top: 30px;
+    }
+    .projects-card:last-child{
+        /* background-color: rebeccapurple; */
+        grid-column-start: auto;
+        grid-row-start:auto;
+        grid-row-end: auto;
+    }
+    .projects-card:nth-child(4){
+        /* background-color: red; */
+        grid-column: span 1;
+    
+    }
+  
+    .projects-card img{
+        width: 100%;
+    }
+    .grid-span-2{
+        grid-column: span 1;
+    }
+}
 
 
 footer {
